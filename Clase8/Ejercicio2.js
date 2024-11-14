@@ -6,7 +6,6 @@
 // • Utiliza una estructura de control de flujo (if, else if, else) para hacer las
 // verificaciones.
 // • Usa parseFloat() para convertir la entrada del usuario a un número.
-
 const prompt = require("prompt-sync")({sigint:true});
 
 // 1. Pida al usuario que ingrese un número.
@@ -18,6 +17,8 @@ if(numero > 0){
     console.log(`El número ${numero} que ingresaste es positivo`)
 } else if (numero == 0) {
     console.log(`El número ${numero} que ingresaste es igual a cero`);
-} else{
+} else if(numero < 0){
     console.log(`El número ${numero} que ingresaste es negativo`)
+} else{
+    console.log(`Lo que ingresaste no es un numero`);
 }
