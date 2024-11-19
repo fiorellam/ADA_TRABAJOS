@@ -8,7 +8,7 @@ const prompt = require("prompt-sync")({sigint:true});
 // 1. Pide al usuario que ingrese su nombre.
 let nombre = prompt("Escribe tu nombre: ");
 // 2. Pide al usuario que ingrese su edad.
-let edad = parseFloat(prompt("Escribe tu edad: "));
+let edad = parseInt(prompt("Escribe tu edad: "));
 // 3. Pide al usuario que ingrese su peso.
 let peso = parseFloat(prompt("Escribe tu peso: "));
 
