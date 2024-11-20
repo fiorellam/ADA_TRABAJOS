@@ -11,4 +11,4 @@ let celsius = parseFloat(prompt("Escribe la temperatura en celsius"));
 
 let fahrenheit = celsius * 9 / 5 + 32;
 
-console.log(`La temperatura en farenheit es: `, celsius);
+console.log(`La temperatura en farenheit es: `, fahrenheit);
