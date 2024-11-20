@@ -20,7 +20,6 @@
 let numero1 = 6;
 let numero2 = 50;
 
-
 if (numero1 > 10 && numero2 > 10){
     console.log("Ambos numeros son mayores que 10");
 } else {
