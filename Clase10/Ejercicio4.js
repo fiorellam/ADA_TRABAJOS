@@ -15,15 +15,18 @@ let nada = null;
 // 1. Realiza una operación matemática usando la variable número, por ejemplo, suma o resta con otro número de tu elección.
 let suma = numero + 5;
 console.log(`la suma es ` + suma);
+
 // 2. Concatena el “string” de la variable texto con otro mensaje adicional.
 let mensaje = texto + "Fiore";
 console.log(`El mensaje es `, mensaje);
+
 // 3. Verifica si la variable “verdadero” es true o false y muestra un mensaje diferente según el resultado.
 if(verdadero){
     console.log(`La variable verdadero es true`);
 } else{
     console.log(`La variable verdadero es false`);
 }
+
 // 4. Implementa una condición para verificar si la variable nada es null y muestra un mensaje si es así.
 if(nada == null){
     console.log(`La variable nada es null`);
