@@ -1,7 +1,6 @@
 //Verificar si un número es positivo, negativo o cero
 // En este ejercicio, practicarás el uso de condicionales (if, else). Escribe un
 // programa en JavaScript que:
-
 // Requisitos:
 // • Utiliza una estructura de control de flujo (if, else if, else) para hacer las
 // verificaciones.
@@ -15,8 +14,6 @@ let numero = parseFloat(prompt("Ingrese un numero: "));
 // 3. Muestre un mensaje indicando cuál es el caso.
 if(numero > 0){
     console.log(`El número ${numero} que ingresaste es positivo`)
-} else if (numero == 0) {
-    console.log(`El número ${numero} que ingresaste es igual a cero`);
 } else if(numero < 0){
     console.log(`El número ${numero} que ingresaste es negativo`)
 } else{
