@@ -4,23 +4,20 @@
 // los intentos restantes. Si no acierta después de los 3 intentos, muestra el
 // número secreto. Usa un for para resolver este ejercicio.
 const prompt = require("prompt-sync")();
-let numero_random = Math.floor(Math.random() * 10) + 1;
-console.log(numero_random);
+let numero_random = 7;
 
-let acertaste = false;
-
+let numero_usuario;
 for(let i = 3; i > 0; i--){
-    let numero_usuario = parseInt(prompt(`Ingresa un numero del 1 al 10 a ver si lo adivinas, solo tienes ${i} intentos: `));
-
+    numero_usuario = parseInt(prompt(`Ingresa un numero del 1 al 10 a ver si lo adivinas, solo tienes ${i} intentos: `));
+    
     if(numero_usuario == numero_random){
-        acertaste = true;
         console.log("Felicidades!!!! Haz adivinado el número");
         break;
     } else {
         console.log("No es el numero");
     }
-
-    if(i == 1 && acertaste == false){
+    
+    if(i == 1){
         console.log(`Perdiste :( el número era: ${numero_random}`);
     }
 }

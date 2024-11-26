@@ -3,5 +3,8 @@
 // final. Usa un ciclo for para realizar la cuenta regresiva.
 
 for(let i = 10; i >= 0; i--){
-    console.log(`Despegue en ${i}`);
+    console.log(`${i}`);
+    if(i == 0){
+        console.log("Despegue!");
+    }
 }
