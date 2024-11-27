@@ -12,7 +12,7 @@ let numeroX = parseInt(prompt("Ingresa un numero: "));
 let cantidadImpares = 0;
 
 // 3. Utilizar un ciclo for para recorrer los números desde 0 hasta X (inclusive).
-for(i = 0; i <= numeroX; i++){
+for(let i = 0; i <= numeroX; i++){
     // 4. Dentro del ciclo, verificar si el número es impar.
     if(i % 2 != 0){
         // 5. Si el número es impar, incrementar el contador de números impares.

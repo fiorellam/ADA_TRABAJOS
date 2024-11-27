@@ -4,7 +4,9 @@
 // los intentos restantes. Si no acierta después de los 3 intentos, muestra el
 // número secreto. Usa un for para resolver este ejercicio.
 const prompt = require("prompt-sync")();
-let numero_random = 7;
+//Math random es una funcion que me da un numero random, le defino que me genere un numero random del 0 al 9
+//Y le indico +1 para que en lugar de ser 0 y 9 sean 1 y 10 
+let numero_random = Math.floor(Math.random() * 10) + 1;
 
 let numero_usuario;
 for(let i = 3; i > 0; i--){

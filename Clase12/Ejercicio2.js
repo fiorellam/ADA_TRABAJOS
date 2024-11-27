@@ -14,4 +14,3 @@ do {
         console.log("Haz iniciado sesión");
     }
 } while( password_input != PASSWORD);
-

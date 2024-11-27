@@ -3,11 +3,11 @@
 // hasta que el usuario ingrese un número negativo. Luego, imprime la suma
 // de todos los números ingresados.
 const prompt = require("prompt-sync")();
-let numero = parseFloat(prompt("Ingresa un numero: "));
+let numero = 0;
 let suma = 0;
 
 while (numero >= 0) {
+    numero = parseInt(prompt("Ingresa un numero: "));
     suma = suma + numero;
-    numero = parseFloat(prompt("Ingresa un numero: "));
 }
 console.log(suma);
