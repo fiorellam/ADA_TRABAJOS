@@ -36,9 +36,12 @@ console.log(`El total de la semana ${semana} es de $${sumaSemana}\n`);
 
 //B) Da el gasto de un dia en especifico
 let numeroDia = parseInt(prompt("Ingresa el dia que quieres saber "));
+//Creo un arreglo que contendrá todos los valores de la matriz
 let arregloGastosDia = [];
+//Recorro la matriz
 for(let fila = 0; fila < matrizGastosDia.length; fila++){
     for(let col = 0; col < matrizGastosDia[fila].length; col++){
+        //Voy agregando cada uno de los valores de la matriz al arreglo
         arregloGastosDia.push(matrizGastosDia[fila][col]);
     }
 }
