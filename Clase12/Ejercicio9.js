@@ -25,12 +25,10 @@ let matrizGastosDia = [
 ];
 //Pregunta al usuario el dia de la semana de la que quiere saber el total de gastos
 let semana = parseInt(prompt("Ingresa la semana de la que deseas calcular el total: "));
-let sumaSemana = 0;
-let cantidadColumnas = matrizGastosDia[0].length; //Cantidad de dias que tiene la semana
-let cantidadFilas = matrizGastosDia.length; //Cantidad de semanas que tiene el mes
 
 //A) Hace la suma de ganancias dependiendo de la semana que indique el usuario
-for(let fila = 0; fila < cantidadColumnas; fila++){
+let sumaSemana = 0;
+for(let fila = 0; fila < matrizGastosDia[0].length; fila++){
     // console.log(matrizGastosDia[semana-1][fila]);
     sumaSemana += matrizGastosDia[semana-1][fila]; 
 }
