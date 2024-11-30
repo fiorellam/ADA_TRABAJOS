@@ -13,7 +13,7 @@ for(let fila = 0; fila < matriz.length; fila++){
     for(let columna = 0; columna < matriz[fila].length; columna++){
         let numero = matriz[fila][columna];
         if(numero >= 10 && numero < 1000){
-            suma = suma + numero;
+            suma += numero; // suma = suma + numero
         }
     }
 }

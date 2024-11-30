@@ -29,7 +29,6 @@ let semana = parseInt(prompt("Ingresa la semana de la que deseas calcular el tot
 //A) Hace la suma de ganancias dependiendo de la semana que indique el usuario
 let sumaSemana = 0;
 for(let fila = 0; fila < matrizGastosDia[0].length; fila++){
-    // console.log(matrizGastosDia[semana-1][fila]);
     sumaSemana += matrizGastosDia[semana-1][fila]; 
 }
 console.log(`El total de la semana ${semana} es de $${sumaSemana}\n`);
