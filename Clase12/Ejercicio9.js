@@ -32,7 +32,7 @@ switch(opcion){
         //Pregunta al usuario el dia de la semana de la que quiere saber el total de gastos
         let semana = parseInt(prompt("Ingresa la semana de la que deseas calcular el total: "));
         let sumaSemana = 0;
-        for(let i = 0; i < matrizGastosDia[0].length; i++){
+        for(let i = 0; i < matrizGastosDia[semana].length; i++){
             sumaSemana += matrizGastosDia[semana-1][i]; 
         }
         console.log(`El total de la semana ${semana} es de $${sumaSemana}\n`);
