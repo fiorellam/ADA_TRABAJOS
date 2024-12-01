@@ -20,40 +20,30 @@ let matriz = [
 let sumaRojo = 0
 let sumaVerde = 0;
 
-
 //SOLUCION CON PUSH
 let arrayDiagonalRoja = [];
-for(let fila = 0;  fila < matriz.length; fila++){
-    arrayDiagonalRoja.push(matriz[fila][fila]);
-}
-// console.log(arrayDiagonalRoja);
-
 let arrayDiagonalVerde = [];
-for(let fila = 0; fila < matriz.length; fila++){
-    arrayDiagonalVerde.push(matriz[fila][matriz.length - 1 - fila ]);
+for(let i = 0;  i < matriz.length; i++){
+    arrayDiagonalRoja.push(matriz[i][i]);
+    arrayDiagonalVerde.push(matriz[i][matriz.length - 1 - i ]);
 }
-// console.log(arrayDiagonalVerde);
-
+console.log(arrayDiagonalRoja);
+console.log(arrayDiagonalVerde);
 for (let i = 0; i < arrayDiagonalRoja.length; i++){
-    console.log(arrayDiagonalRoja[i]);
     sumaRojo += arrayDiagonalRoja[i];
-} 
-console.log("Rojo ", sumaRojo);
-
-for (let i = 0; i < arrayDiagonalVerde.length; i++){
     sumaVerde += arrayDiagonalVerde[i];
 } 
+console.log("Rojo ", sumaRojo);
 console.log("Verde ",sumaVerde);
-
 
 // //SOLUCION SIN PUSH
 // //Sumar diagonal roja
-// for(let fila = 0; fila < matriz.length; fila++){
-//     sumaRojo += matriz[fila][fila];
+// for(let i = 0; i < matriz.length; i++){
+//     sumaRojo += matriz[i][i];
 // }
 // console.log("Rojo ", sumaRojo);
 // //Sumar diagonal verde
-// for(let fila = matriz.length -1; fila >= 0; fila-- ){
-//     sumaVerde += matriz[fila][fila];
+// for(let j = matriz.length -1; j >= 0; j-- ){
+//     sumaVerde += matriz[i][matriz.length -1 - i];
 // }
 // console.log("Verde ",sumaVerde);

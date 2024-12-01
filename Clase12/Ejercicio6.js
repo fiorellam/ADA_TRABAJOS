@@ -9,9 +9,9 @@ let matriz = [
 ];
 let suma = 0;
 
-for(let fila = 0; fila < matriz.length; fila++){
-    for(let columna = 0; columna < matriz[fila].length; columna++){
-        let numero = matriz[fila][columna];
+for(let i = 0; i < matriz.length; i++){
+    for(let j = 0; j < matriz[i].length; j++){
+        let numero = matriz[i][j];
         if(numero >= 10 && numero < 1000){
             suma += numero; // suma = suma + numero
         }

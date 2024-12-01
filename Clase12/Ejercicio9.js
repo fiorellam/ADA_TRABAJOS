@@ -23,35 +23,85 @@ let matrizGastosDia = [
     [1700, 1150, 1690, 1900, 1770, 4500, 2560],
     [800, 1250, 1430, 2100, 1980, 1270, 950]
 ];
-//Pregunta al usuario el dia de la semana de la que quiere saber el total de gastos
-let semana = parseInt(prompt("Ingresa la semana de la que deseas calcular el total: "));
+console.log(`Menú de opciones \n 1. Total de gastos de una semana en específico \n 2. Total de un día en particular
+ 3. Gasto total de un mes \n 4. Obtener la semana en que más gastos se realizaron \n 5. Obtener el día en que más gastos se realizaron`)
+let opcion = parseInt(prompt(`Escribe el número de la opción que deseas: `));
+switch(opcion){
+    case 1:
+        //A) Hace la suma de ganancias dependiendo de la semana que indique el usuario
+        //Pregunta al usuario el dia de la semana de la que quiere saber el total de gastos
+        let semana = parseInt(prompt("Ingresa la semana de la que deseas calcular el total: "));
+        let sumaSemana = 0;
+        for(let i = 0; i < matrizGastosDia[0].length; i++){
+            sumaSemana += matrizGastosDia[semana-1][i]; 
+        }
+        console.log(`El total de la semana ${semana} es de $${sumaSemana}\n`);
+        break;
 
-//A) Hace la suma de ganancias dependiendo de la semana que indique el usuario
-let sumaSemana = 0;
-for(let fila = 0; fila < matrizGastosDia[0].length; fila++){
-    sumaSemana += matrizGastosDia[semana-1][fila]; 
-}
-console.log(`El total de la semana ${semana} es de $${sumaSemana}\n`);
+    case 2: 
+        //B) Da el gasto de un dia en especifico
+        let numeroDia = parseInt(prompt("Ingresa el dia que quieres saber "));
+        //Creo un arreglo que contendrá todos los valores de la matriz, es decir todos los días del mes
+        let arregloGastosDia = [];
+        //Recorro la matriz
+        for(let i = 0; i < matrizGastosDia.length; i++){
+            for(let j = 0; j < matrizGastosDia[i].length; j++){
+                arregloGastosDia.push(matrizGastosDia[i][j]); //Voy agregando cada uno de los valores de la matriz al arreglo
+            }
+        }
+        console.log(`El gasto del día ${numeroDia} es de ${arregloGastosDia[numeroDia-1]}\n`)
+        break;
+    case 3:
+        //C)Hace la suma de los gastos en el mes
+        let sumaTotalGastos = 0;
+        for(let i = 0; i < matrizGastosDia.length; i ++){
+            for (let j = 0; j < matrizGastosDia[i].length; j++){
+                sumaTotalGastos += matrizGastosDia[i][j];
+            }
+        }
+        console.log(`El total de gastos en el mes es de ${sumaTotalGastos} \n`);
+        break;
 
-//B) Da el gasto de un dia en especifico
-let numeroDia = parseInt(prompt("Ingresa el dia que quieres saber "));
-//Creo un arreglo que contendrá todos los valores de la matriz
-let arregloGastosDia = [];
-//Recorro la matriz
-for(let fila = 0; fila < matrizGastosDia.length; fila++){
-    for(let col = 0; col < matrizGastosDia[fila].length; col++){
-        //Voy agregando cada uno de los valores de la matriz al arreglo
-        arregloGastosDia.push(matrizGastosDia[fila][col]);
+    case 4:
+        //D) Obtener cuál fue la semana que más gastos se realizaron
+        let sumaSemanal = 0;
+        let totalSemanasArray = [];
+        for(let i = 0; i < matrizGastosDia.length; i++){
+            for(let j = 0; j < matrizGastosDia[i].length; j++){
+                sumaSemanal += matrizGastosDia[i][j];
+            }
+            // console.log(`Esta semana gastaste: ${sumaSemanal}`);
+            totalSemanasArray.push(sumaSemanal);
+            sumaSemanal = 0;
+        }
+        // console.log('Imprimiendo arreglo totalSemanasArray', totalSemanasArray);
+        let gastoMayorSemana = 0;
+        let numeroSemana;
+        for( let i = 0; i< totalSemanasArray.length; i++ ){
+            if(totalSemanasArray[i] > gastoMayorSemana){
+                gastoMayorSemana = totalSemanasArray[i];
+                numeroSemana = i;
+            }
+        }
+        console.log(`El gasto Mayor por semana fue de ${gastoMayorSemana}, y fue la semana ${numeroSemana + 1}`);
+        break;
+    case 5: 
+    //D) Obtener cuál fue la semana que más gastos se realizaron
+    let diasArray = [];
+    for(let i = 0; i < matrizGastosDia.length; i++){
+        for(let j = 0; j < matrizGastosDia[i].length; j++){
+            diasArray.push(matrizGastosDia[i][j]);
+        }
     }
-}
-console.log(`El gasto del día ${numeroDia} es de ${arregloGastosDia[numeroDia-1]}\n`)
-
-//C)Hace la suma de los gastos en el mes
-let sumaTotalGastos = 0;
-for(let fila = 0; fila < matrizGastosDia.length; fila ++){
-    for (let col = 0; col < matrizGastosDia[fila].length; col++){
-        sumaTotalGastos += matrizGastosDia[fila][col];
+    // console.log('Imprimiendo arreglo diasArray', diasArray);
+    let numeroDiaPosicion;
+    let diaMayorGastos = 0;
+    for( let i = 0; i< diasArray.length; i++ ){
+        if(diasArray[i] > diaMayorGastos){
+            diaMayorGastos = diasArray[i];
+            numeroDiaPosicion = i;
+        }
     }
-}
-console.log(`El total de gastos en el mes es de ${sumaTotalGastos} \n`);
-
+    console.log(`El día que más se gastó fue el ${numeroDiaPosicion + 1}, y se gastó ${diaMayorGastos}`);
+    break;
+}        
