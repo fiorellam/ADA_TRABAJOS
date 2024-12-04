@@ -104,6 +104,8 @@ switch(opcion){
     }
     console.log(`El día que más se gastó fue el ${numeroDiaPosicion + 1}, y se gastó ${diaMayorGastos}`);
     break;
+
     default:
         console.log(`LA OPCION QUE INGRESASTE NO ES VALIDA`);
+    break;
 }        
