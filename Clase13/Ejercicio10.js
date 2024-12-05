@@ -15,6 +15,13 @@ let calcularFactorial = function(numero){
         numero = numero * inicio;
     }
     return numero;
+
+    //Otra forma de resolverlo
+    // for(let inicio = numero ; inicio > 1; inicio--){
+    //     //Numero va a guardar el resultado de 5 X 4
+    //     numero = numero * (inicio-1);
+    // }
+    // return numero;
 }
 
-console.log(calcularFactorial(0));
+console.log(calcularFactorial(5));
