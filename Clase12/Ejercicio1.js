@@ -8,6 +8,10 @@ let suma = 0;
 
 while (numero >= 0) {
     numero = parseInt(prompt("Ingresa un numero: "));
+    if(isNaN(numero)){
+        console.log("Lo que ingresaste no es un numero ");
+        break;
+    }
     suma = suma + numero;
 }
 console.log(suma);
