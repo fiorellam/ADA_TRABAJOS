@@ -6,8 +6,8 @@ const my_name = 'Fiorella';
 let user_name = prompt("Ingresa tu nombre ");
 
 //Convierto todos los caracteres a minisculas, para no tener problemas si el nombre esta con mayusculas o minusculas
-let my_name_minusculas = my_name.toLocaleLowerCase();
-let user_name_minusculas = user_name.toLocaleLowerCase();
+let my_name_minusculas = my_name.toLowerCase();
+let user_name_minusculas = user_name.toLowerCase();
 
 if(my_name_minusculas == user_name_minusculas){
     console.log(`Mi nombre ${user_name} y tu nombre son iguales`);
