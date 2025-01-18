@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Nacimiento",
+    "fecha": "25-01-2025",
+    "lugar": "Ensenada"
+  },
+  {
+    "id": 3,
+    "nombre": "Cumpleanios",
+    "fecha": "25-01-2026",
+    "lugar": "Ensenada"
+  },
+  {
+    "id": 4,
+    "nombre": "Confirmacion",
+    "fecha": "25-01-2035",
+    "lugar": "Ensenada"
+  }
+]

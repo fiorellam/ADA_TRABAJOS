@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "descripcion": "Buscar nuevo trabajo",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 2,
+    "descripcion": "Terminar Manual",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 3,
+    "descripcion": "Ir a bailar",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 4,
+    "descripcion": "Escuchar el nuevo album de bad bunny",
+    "estado": "Completada"
+  }
+]
