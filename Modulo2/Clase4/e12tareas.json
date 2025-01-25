@@ -1,0 +1,12 @@
+[
+  {
+    "nombre": "Actualizar linkedin",
+    "descripcion": "Crear y revisar informacion para crear un buen perfil",
+    "estado": "pendiente"
+  },
+  {
+    "nombre": "Actualizar fb",
+    "descripcion": "Crear y revisar informacion para crear un buen perfil",
+    "estado": "completa"
+  }
+]

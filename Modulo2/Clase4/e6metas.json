@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "Aprender Node.js",
+    "estado": "pendiente"
+  },
+  {
+    "nombre": "Viajar a Japon",
+    "estado": "pendiente"
+  },
+  {
+    "nombre": "Viajar a Cancun",
+    "estado": "completa"
+  }
+]

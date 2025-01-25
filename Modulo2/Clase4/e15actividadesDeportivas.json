@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "tipo": "nadar",
+    "duracion": 15.5,
+    "fecha": 1737271787189
+  },
+  {
+    "id": 2,
+    "tipo": "correr",
+    "duracion": 25.5,
+    "fecha": 1737271787203
+  },
+  {
+    "id": 3,
+    "tipo": "correr",
+    "duracion": 35.5,
+    "fecha": 1737271787205
+  }
+]
