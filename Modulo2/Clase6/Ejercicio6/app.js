@@ -21,7 +21,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.setPrompt("Hola este ejercicio es para probar los metodos de readline, Escribe algo: ");
+rl.setPrompt("Hola este ejercicio es para probar los metodos de readline, Escribe algocom: ");
 rl.prompt();//Mostrar el prompt
 
 rl.on('line', (input) => {
