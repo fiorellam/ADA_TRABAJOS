@@ -1,0 +1,6 @@
+[
+    {"id": 1, "nombre": "habitacion1", "disponible": true },
+    {"id": 2, "nombre": "habitacion1", "disponible": true },
+    {"id": 3, "nombre": "habitacion1", "disponible": false},
+    {"id": 4, "nombre": "habitacion1", "disponible": true }
+]
