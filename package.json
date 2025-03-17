@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "prompt-sync": "^4.2.0"
+    "dotenv": "^16.4.7",
+    "prompt-sync": "^4.2.0",
+    "readline-sync": "^1.4.10",
+    "uuid": "^11.1.0"
   }
 }
