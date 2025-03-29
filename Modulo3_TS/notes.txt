@@ -1,0 +1,9 @@
+1. crear carpeta mkdir ADA_TRABAJOS_TS
+2. cd ADA_TRABAJOS_TS
+3. npm init -y (se crea el package.json)
+4. npm install -g typescript
+5. tsc -v para ver si esta instalado correctamente el typescript
+6. npm install tsd -g
+7. tsc --init para inicializar tsconfig.json
+8. tsc -w para compilar archivos .ts
+9. npx ts-node primitivos.ts para ejecutar el archivo
