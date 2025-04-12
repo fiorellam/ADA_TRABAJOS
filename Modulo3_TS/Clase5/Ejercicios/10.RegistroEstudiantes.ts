@@ -27,7 +27,7 @@ class Estudiante{
 }
 
 class RegistroEstudiantes{
-    public estudiantes: Estudiante[] = [];
+    private estudiantes: Estudiante[] = [];
 
     //Agregar estudiante
     public agregarEstudiante (estudiante: Estudiante) : void{
