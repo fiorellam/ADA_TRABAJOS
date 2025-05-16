@@ -6,3 +6,28 @@
 // nada.
 // Este ejercicio muestra cómo encadenar tareas y ejecutar una tarea
 // condicionalmente en función del resultado de una promesa.
+function tarea1(){
+    return new Promise((resolve, reject) => {
+        setTimeout(()=> resolve("Tarea 1 realizada"), 2000)
+    })
+}
+
+function tarea2(){
+    return new Promise ((resolve, reject) => {
+        setTimeout(()=> resolve("Tarea 2 realizada"), 2000)
+    })
+}
+
+async function ejecutarTareas(){
+    try{
+        const resultadoTarea1 = await tarea1();
+        console.log(resultadoTarea1);
+        if(resultadoTarea1){
+            const resultadoTarea2 = await tarea2();
+            console.log(resultadoTarea2);
+        }
+    }catch(error){
+        console.error(error);
+    }
+}
+ejecutarTareas();

@@ -15,3 +15,26 @@
 // Este ejercicio es esencial para aprender a manejar errores en operaciones de
 // autenticación, simulando problemas comunes que podrías encontrar en
 // sistemas de login.
+//TODO: VALIDAR que el nombre de usuario existe y es valido, si el usuario no existe o se envia null o undefined
+function autenticar(nombreUsuario){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(nombreUsuario != null && nombreUsuario != undefined){
+                resolve("Autenticacion exitosa");
+            } else {
+                reject("No se pudo autenticar, el usuario no existe");
+            }
+        }, 2000 );
+    })
+}
+
+async function iniciarSesion(nombreUsuario){
+    try{
+        console.log("Iniciando sesión ...");
+        const resultado = await autenticar(nombreUsuario);
+        console.log(resultado);
+    }catch(error){
+        console.error("Ocurrió un error ", error);
+    }
+}
+iniciarSesion("Fiorella");

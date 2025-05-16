@@ -12,3 +12,20 @@
 // imprime el mensaje cuando se complete la operación.
 // Este ejercicio muestra cómo se manejan operaciones asíncronas en procesos de
 // recuperación de contraseñas, una funcionalidad común en aplicaciones web.
+function recuperarContrasena(correoUsuario){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`Correo de recuperación enviado a ${correoUsuario}`);
+        }, 3000)
+    })
+}
+
+async function iniciarRecuperacion(correo){
+    try{
+        const resultado = await recuperarContrasena(correo);
+        console.log(resultado)
+    } catch(error){
+        console.error('Error', error);
+    }
+}
+iniciarRecuperacion("fiorellaroma98@gmail.com");

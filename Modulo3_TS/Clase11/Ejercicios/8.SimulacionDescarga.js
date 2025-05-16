@@ -13,3 +13,27 @@
 // el error.
 // Este ejercicio refuerza el uso de try/catch en operaciones de descarga de
 // archivos, algo muy útil cuando se manejan archivos en una aplicación.
+function descargarArchivo(nombreArchivo){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(nombreArchivo != null && nombreArchivo != undefined){
+                console.log("Descargando...")
+                resolve(`Archivo ${nombreArchivo} descargado`);
+            } else {
+                reject("Error en la descarga");
+            }
+        },2000)
+    })
+}
+
+async function iniciarDescarga(nombreArchivo){
+    try{
+        const resultado = await descargarArchivo(nombreArchivo);
+        console.log(resultado);
+    } catch (error){
+        console.error(error);
+    }
+}
+
+iniciarDescarga();
+iniciarDescarga("archivo.jpg");
