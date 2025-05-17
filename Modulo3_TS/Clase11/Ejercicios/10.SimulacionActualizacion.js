@@ -12,3 +12,24 @@
 // adecuada.
 // Este ejercicio es útil para aprender cómo manejar situaciones de validación en
 // inventarios de productos.
+function actualizarInventario(cantidad){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(cantidad > 0){
+                resolve("Inventario Actualizado");
+            } else {
+                reject("Inventario insuficiente");
+            }
+        }, 1500)
+    })
+}
+
+async function ejecutarActualizacion(cantidad){
+    try{
+        const resultado = await actualizarInventario(cantidad);
+        console.log(resultado);
+    } catch(error){
+        console.log("Error:" , error);
+    }
+}
+ejecutarActualizacion(10);
