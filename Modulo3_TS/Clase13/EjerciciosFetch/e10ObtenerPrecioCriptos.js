@@ -12,3 +12,18 @@
 // ies=usd.
 // • Usa el id de la criptomoneda en minúsculas (por ejemplo, bitcoin para
 // BTC). 
+async function getCriptoPrice(simbolCripto){
+    try{
+        if(!simbolCripto) throw new Error('No has enviado el termino de Busqueda');
+        
+        const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${simbolCripto}&vs_currencies=usd`);
+        if(!response.ok) throw new Error('No se encontro nada');
+
+        const data = await response.json();
+        
+        console.log(data);
+    }catch(error){
+        console.error(error);
+    }
+}
+getCriptoPrice('bitcoin');
