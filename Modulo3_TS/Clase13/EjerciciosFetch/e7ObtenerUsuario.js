@@ -9,3 +9,18 @@
 // Pistas:
 // • La URL para buscar un usuario es
 // https://jsonplaceholder.typicode.com/users/{id}. 
+async function getUser(id){
+    try{
+        if(!id) throw new Error('No has enviado el id del usuario que deseas buscar');
+        
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+        if(!response.ok) throw new Error('No se encontro el usuario');
+
+        const data = await response.json();
+        const {name, username, email} = data;
+        console.log(name, username, email);
+    }catch(error){
+        console.error(error);
+    }
+}
+getUser(2);

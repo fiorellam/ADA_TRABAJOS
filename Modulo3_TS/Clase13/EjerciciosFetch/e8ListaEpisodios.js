@@ -10,3 +10,32 @@
 // https://api.tvmaze.com/singlesearch/shows?q=nombre_de_la_serie&embe
 // d=episodes.
 // • Los episodios están dentro de _embedded.episodes.
+async function getEpisodes(titleSerie){
+    try{
+        if(!titleSerie) throw new Error('No enviaste el titulo de la serie que deseas encontrar');
+        
+        const response = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${titleSerie}&embed=episodes`)
+        if(!response.ok) throw new Error('No se encontro la serie');
+
+        const data = await response.json();
+        const serieName = data.name;
+        const episodes = data._embedded.episodes;
+        console.log(serieName.toUpperCase());
+        
+        let currentSeason = null;
+        episodes.forEach(episode => {
+            if(episode.season !== currentSeason){
+                //Si la temporada cmabia imprime la temporada
+                if(currentSeason !== null){
+                    console.log(`-------------------------TEMPORADA ${episode.season}-------------------------`);
+                }
+                currentSeason = episode.season;
+            }
+            console.log(`Temporada ${episode.season} x ${episode.number} : ${episode.name}`);  
+        });
+
+    }catch(error){
+        console.error(error);
+    }
+}
+getEpisodes('Friends');

@@ -9,3 +9,21 @@
 // Pistas:
 // • La URL de búsqueda es
 // https://api.github.com/search/repositories?q={query}&per_page=5. 
+async function searchRepo(terminoBusqueda){
+    try{
+        if(!terminoBusqueda) throw new Error('No has enviado el termino de Busqueda');
+        
+        const response = await fetch(`https://api.github.com/search/repositories?q=${terminoBusqueda}&per_page=5`);
+        if(!response.ok) throw new Error('No se encontro nada');
+
+        const data = await response.json();
+        const repos = data.items;
+        repos.forEach(repo => {
+            console.log(repo.name, repo.description);
+            
+        });
+    }catch(error){
+        console.error(error);
+    }
+}
+searchRepo('PHP');
