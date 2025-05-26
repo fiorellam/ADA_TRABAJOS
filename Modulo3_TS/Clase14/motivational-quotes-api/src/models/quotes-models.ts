@@ -48,7 +48,7 @@ export class QuotesModel {
         const index = data.quotes.findIndex((quote: Quote) => quote.id === id)
         // encuentra el indice de la frase que coincide con el id
         if (index === -1) return null
-        data.quote[index] = {...data.quotes[index], ...updatedData}
+        data.quotes[index] = {...data.quotes[index], ...updatedData}
         fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
         return data.quotes[index]
     }
@@ -59,7 +59,7 @@ export class QuotesModel {
         const index = data.quotes.findIndex((quote: Quote) => quote.id === id)
         // encuentra el indice de la frase que coincide con el id
         if (index === -1) return false
-        data.quote.splice(index, 1)
+        data.quotes.splice(index, 1)
         data.info.total -= 1
         fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
         return true

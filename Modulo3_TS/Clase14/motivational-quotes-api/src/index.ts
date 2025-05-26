@@ -26,5 +26,4 @@ const PORT = 3000
 // iniciar el servidor 
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
-    
 })

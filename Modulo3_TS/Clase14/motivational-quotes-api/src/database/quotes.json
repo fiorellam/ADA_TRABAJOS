@@ -2,7 +2,7 @@
   "info": {
     "name": "Quotes Database",
     "version": "1.0.0",
-    "total": 3
+    "total": 4
   },
   "quotes": [
     {
@@ -16,9 +16,14 @@
       "autor": "Viki"
     },
     {
-      "text": "Nunca pares de aprender",
+      "text": "Nunca pares de aprender...",
       "autor": "Leonidas Esteban",
       "id": 3
+    },
+    {
+      "text": "Todo esfuerzo viene con su recompensa...",
+      "autor": "Fiore",
+      "id": "4"
     }
   ]
 }
