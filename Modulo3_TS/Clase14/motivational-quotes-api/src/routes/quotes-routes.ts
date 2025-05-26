@@ -1,15 +1,24 @@
-import {Router} from 'express';
-//Importacion de funciones
-import {getAllQuotes, getQuotesById, createQuotes, updateQuotes, deleteQuotes} from '../controllers/quotes-controllers';
-import {validateQuotes} from '../middlewares/validate-middleware';
+import {Router} from 'express'
 
-//Creando la instancia del Router (para manejar las rutas)
-const router: Router = Router();
+// importacion de funciones
+import {
+    getAllQuotes,
+    getQuotesById,
+    createQuotes,
+    updateQuotes,
+    deleteQuotes
+} from '../controllers/quotes-controllers'
 
-router.get('/', getAllQuotes);
-router.get('/:id', getQuotesById);
-router.post('/', validateQuotes, createQuotes);
-router.put('/:id', updateQuotes);
-router.delete('/:id', deleteQuotes);
+import {validateQuote} from '../middlewares/validate-middleware'
 
-export default router;
+// crando la instancia del router (para manejar las rutas)
+const router: Router = Router()
+
+// Rutas 
+router.get('/', getAllQuotes)
+router.get('/:id', getQuotesById)
+router.post('/', validateQuote, createQuotes)
+router.patch('/:id', updateQuotes)
+router.delete('/:id', deleteQuotes)
+
+export default router
