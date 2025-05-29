@@ -1,10 +1,10 @@
 import express, { Request, Response, NextFunction } from 'express'
 
-export const authMiddleware = (req: Request, res: Response, next: NextFunction): void => {
+export const verifyToken = (req: Request, res: Response, next: NextFunction): void => {
     const token = req.headers['authorization']
-    if (!token || token !== 'Bearer my-secret-token') {
-        res.status(401).json({error: 'No autorizado'})
-        return
+    if (token === '123456') {
+        next();
+    } else {
+        res.status(401).json({error: "Token invalido o faltante"});
     }
-    next()
 }

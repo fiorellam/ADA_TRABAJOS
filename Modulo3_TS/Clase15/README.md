@@ -3,3 +3,4 @@
 2. npm install express
 3. npm install -D typescript ts-node ts-node-dev @types/express
 4. npx tsc --init
+5. npm install @types/cors --save-dev
