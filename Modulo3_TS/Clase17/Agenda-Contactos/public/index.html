@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Declara el tipo de documento como HTML5 y establece el idioma del contenido como ingles -->
+<html lang="en">
+<head>
+    <!-- Establece la codificacion de caracteres como utf8 para admitir una amplia variedad de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Permite que el diseno sea responsive, asegurandose de que se adapte al ancho del dispositivo del usuario -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define el titulo de la pagina que aparecera en la pestana del navegador -->
+    <title>Agenda de Contactos</title>
+    <!-- Incluye la hoja de estilos externa llamada 'style.css' para definir el diseno y estilo visual -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Crea un contenedor principal con la clase 'container' que agrupa el contenido de la pagina -->
+    <div class="container">
+        <!-- Muestra un encabezado principal que sirve como titulo de la pagina -->
+        <h1>Agenda de contactos</h1>
+        <!-- Inicia un formulario con el identificador unico "contact-form" para gestionar la entrada de datos -->
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Nombre" required>
+            <input type="email" id="email" placeholder="Correo Electronico" required>
+            <input type="text" id="phone" placeholder="Telefono" required>
+            <button type="submit">Agregar Contacto</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="contacts-table"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

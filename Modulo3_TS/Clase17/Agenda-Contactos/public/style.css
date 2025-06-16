@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0; /*Elimina el margen predeterminado del cuerpo del documento*/
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container{
+    max-width: 600px; /*Limita el ancho maximo del contenedor a 600 pixeles para evitar que ocupe toda la pantalla*/
+    margin: 20px auto; /*Agrega margen de 20 px y lo centra horizontalmente*/
+    padding: 20px; /*Agrega un espacio interno de 20 pixeles dentro del contenedor*/
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+}
+h1{
+    text-align: center;
+}
+form{
+    display: flex;
+    gap: 10px; /*Establece un espacio de 10 px entre los elementos del formulario*/
+    margin-bottom: 20px;
+}
+form input, form button{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius:  4px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse; /*Elimina los espacios entre bordes de las celdas de la tabla*/
+    margin-top: 20px;
+}
+
+table th, table td{
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th{
+    background-color: #f4f4f9;
+}
+
+button{
+    cursor: pointer;
+}
+.delete-btn{
+    color:white;
+    background-color: red;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
